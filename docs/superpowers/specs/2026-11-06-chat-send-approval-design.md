@@ -1,6 +1,6 @@
 # Chat send approval design
 
-Status: awaiting Andrew Warren's approval. No send-path behavior is implemented by this document.
+Status: design approved in pull request 1, then held. A source review of the G2/Current glasses path is in `docs/superpowers/specs/2026-11-06-g2-approval-comparison.md`. Do not implement the Ed25519 bypass in this document until Andrew accepts or rejects the adjustment in that comparison. No send-path behavior is implemented by this document.
 
 Repository inspected: `growfishdigital/grokbot-imessage-skill` at `ccd12b9c8cadeb8da27df16801bc1469c0883e9e` (`main`). Origin is this fork. The Mac install path and its ignored runtime files were not read or modified.
 

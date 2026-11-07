@@ -6,7 +6,9 @@
 
 **Architecture:** `send_gate.py` continues to mint and atomically consume the 60-second nonce. A new verify-only module checks an optional `chat_approval` object against a root-owned config. `helper.py` calls that check only when the request contains `chat_approval`; otherwise it calls `_run_send_confirmation` as it does today. No code in this plan signs with an owner key or contacts a Grok endpoint.
 
-**Tech Stack:** Python 3.9+ stdlib, existing `unittest` suite, `./tools/test.sh v1.4.8`. Ed25519 verify is pure Python (RFC 8032). No new package.
+**Tech Stack:** Python 3.9+ stdlib, existing `unittest` suite, `./tools/test.sh v1.4.8`.
+
+**Hold:** Do not execute these tasks yet. The G2 comparison supersedes an immediate implementation. G2 signs with HMAC-SHA256 on the Mac relay, not with a signature Grok Bot can present. If implementation resumes, do not add the pure-Python curve in Task 1; verify with PyCA `cryptography` or reuse the GrokHUD relay without giving this agent its key. See `docs/superpowers/specs/2026-11-06-g2-approval-comparison.md`.
 
 ## Global Constraints
 
